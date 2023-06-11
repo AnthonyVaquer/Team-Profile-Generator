@@ -75,9 +75,9 @@ It is recommended that you start with a directory structure that looks like the 
 ├── lib/                   // classes
 ├── src/                   // template helper code 
 ├── .gitignore             // indicates which folders and files Git should ignore
+```
 ├── index.js               // runs the application
 └── package.json           
-```
 
 **Important**: Make sure that you remove `dist` from the `.gitignore` file so that Git will track this folder and include it when you push up to your application's repository.
 
@@ -131,9 +131,9 @@ Finally, although it’s not a requirement, consider adding validation to ensure
 >
 > * A repository that has no code
 >
-> * A repository that includes a unique name but nothing else
 >
 > * A repository that includes only a README file but nothing else
+> * A repository that includes a unique name but nothing else
 >
 > * A repository that only includes starter code
 
