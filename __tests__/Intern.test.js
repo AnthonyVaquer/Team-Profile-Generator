@@ -1,4 +1,4 @@
-const Intern = require("../lib/Manager");
+const Intern = require("../lib/Intern");
 
 let employees = [];
 
@@ -6,14 +6,15 @@ test("create an intern", () => {
   let name = "Jimmy";
   let id = 1;
   let email = "intern@email.com";
-  let school = "Harvard";
+  let school = "CSULB";
   let addIntern = new Intern(name, id, email, school);
-  employees.push(addManager);
+  console.log(addIntern)
+  employees.push(addIntern);
   expect(employees.length).toBe(1);
 });
 
 test("check intern school", () => {
-  expect(employees[0].school).toBe("Harvard");
+  expect(employees[0].school).toBe("CSULB");
 });
 
 test("check intern name", () => {
@@ -21,7 +22,7 @@ test("check intern name", () => {
 });
 
 test("check intern email", () => {
-  expect(employees[0].email).toBe("email");
+  expect(employees[0].email).toBe("intern@email.com");
 });
 
 test("check intern id", () => {
