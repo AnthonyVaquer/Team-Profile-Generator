@@ -110,35 +110,5 @@ inquirer
   .catch((error) => {
     console.log(error);
   })
-  // see if they want to add another employee (not done)
-  function promptEmployee() {
-    return inquirer.prompt([
-      {
-        message: "Do you want to add another employee?",
-        type: "confirm",
-        name: "addAnother",
-      },
-    ])
-    // prompt them to choose what type of employee
-    .then((answer) => {
-    if (answer.addAnother) {
-      return inquirer.prompt([
-        {
-          message: "What type of employee do you want to add?",
-          type: "list",
-          name: "employeeType",
-          choices: ["Intern", "Engineer"],
-        },
-      ])
-      // based on the user input run the previous prompts
-      .then((answer) => {
-        if (answer.employeeType === "Intern") {
-          return promptIntern();
-        } else if (answer.employeeType === "Engineer") {
-          return promptEngineer();
-        }
-      });
-    }
-  });
-}
+
 
